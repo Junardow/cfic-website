@@ -1,0 +1,347 @@
+/* ─────────────────────────────────────────────
+   Reset
+───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─────────────────────────────────────────────
+   Design tokens
+───────────────────────────────────────────── */
+:root {
+  --green-dark:  #1a5c2a;
+  --green-mid:   #2d8a44;
+  --green-light: #4caf50;
+  --yellow:      #f5c800;
+  --yellow-dark: #d4a800;
+  --white:       #ffffff;
+  --off-white:   #f8f9f4;
+  --text-dark:   #1a1a1a;
+  --text-muted:  #555;
+  --border:      #e0e0d8;
+  --fade:        1.5s;
+  --hold:        5s;
+}
+
+/* ─────────────────────────────────────────────
+   Base
+───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* ─────────────────────────────────────────────
+   Shared UI primitives
+   (used across pages — do not duplicate)
+───────────────────────────────────────────── */
+.section-label {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  background: rgba(45, 138, 68, 0.1);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.section-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.btn-pill {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 12px 26px;
+  border-radius: 999px;
+  transition: background 0.22s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-pill:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+.card-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--green-dark);
+  transition: color 0.2s;
+}
+
+.card-link:hover {
+  color: var(--green-mid);
+}
+
+/* ─────────────────────────────────────────────
+   Shared overlay (backdrop + card shell)
+   Used on Home, Products, Services pages
+───────────────────────────────────────────── */
+.card-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: overlay-in 0.2s ease;
+}
+
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.card-overlay {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  position: relative;
+  animation: overlay-card-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes overlay-card-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+.card-overlay-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.card-overlay-close:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ─────────────────────────────────────────────
+   Inquiry form overlay
+   Used on Services and Products pages
+───────────────────────────────────────────── */
+.inq-overlay {
+  max-width: 520px;
+  padding: 48px 40px 40px;
+}
+
+.inq-overlay-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 6px;
+}
+
+.inq-overlay-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+.inq-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inq-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.inq-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inq-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.inq-input,
+.inq-select,
+.inq-textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.inq-input:focus,
+.inq-select:focus,
+.inq-textarea:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45, 138, 68, 0.12);
+}
+
+.inq-input:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.inq-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.inq-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.inq-submit {
+  margin-top: 4px;
+  align-self: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  background: var(--green-dark);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.22s, transform 0.15s;
+}
+
+.inq-submit:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+.inq-back {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.inq-back:hover {
+  color: var(--text-dark);
+}
+
+.inq-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.inq-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(45, 138, 68, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-dark);
+}
+
+.inq-success-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.inq-success h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.inq-success p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .inq-overlay {
+    padding: 40px 24px 32px;
+  }
+  .inq-form-row {
+    grid-template-columns: 1fr;
+  }
+}
