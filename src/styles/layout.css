@@ -253,6 +253,10 @@ nav {
     padding: 10px 8px;
   }
 
+  .nav-links a::after {
+    bottom: 8px;
+  }
+
   .nav-cta {
     display: none;
   }
@@ -311,11 +315,10 @@ nav {
 }
 
 .footer-brand img {
-  height: 44px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   margin-bottom: 14px;
-  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {

@@ -16,7 +16,7 @@ const SERVICES = [
     img:      '/images/serviceIMG2.png',
     category: 'Consultancy',
     title:    'Technical Assistance',
-    desc:     'Our team of food scientists and engineers provides expert guidance across a range of food industry needs — from product development to market readiness.',
+    desc:     ' Our team provides expert guidance, from product development to market readiness.',
     items:    [
       'Packaging & Labeling Consultation',
       'Food Product Consultation',
@@ -40,7 +40,7 @@ const SERVICES = [
     img:      '/images/serviceIMG4.png',
     category: 'Research',
     title:    'Contract Research & Development',
-    desc:     'Partner with our research team to develop new food products or improve existing ones. From concept to market-ready prototype, we handle the full R&D pipeline.',
+    desc:     'Our team partners with you to develop new products or refine existing ones, overseeing every stage of the development process from initial concept to a market-ready prototype.',
     items:    ['Product Formulation & Optimization', 'Technology Transfer'],
   },
 ]

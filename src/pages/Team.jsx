@@ -3,7 +3,7 @@ import '../styles/about.css'
 
 const TEAM_MEMBERS = [
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-cutamora.png',
     name:      'CUTAMORA, Genesis Jared A.',
     role:      'Assistant Professor 1 / Center Chief, Caraga Food Innovation Center (CFIC), CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
@@ -12,7 +12,7 @@ const TEAM_MEMBERS = [
     skills:    ['Leadership', 'Food Innovation', 'Research Management', 'Policy Development'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-modina.png',
     name:      'MODINA, Lix B.',
     role:      'Assistant Professor 1 / TTLO College Intellectual Property Coordinator, CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
@@ -21,7 +21,7 @@ const TEAM_MEMBERS = [
     skills:    ['R&D', 'Process Engineering', 'HACCP', 'Product Development'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-galang.png',
     name:      'GALANG, Marie Bless B.',
     role:      'Assistant Professor 1',
     education: 'Doctor of Philosophy in Food Science, University of the Philippines Los Baños',
@@ -30,7 +30,7 @@ const TEAM_MEMBERS = [
     skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-alambatin.png',
     name:      'ALAMBATIN, Peth Trixia Brooxs C.',
     role:      'Instructor 1',
     education: 'Master of Science in Food Science, University of the Philippines Mindanao',

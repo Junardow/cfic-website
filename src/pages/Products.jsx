@@ -3,69 +3,69 @@ import '../styles/services.css'
 import '../styles/products.css'
 
 const CATEGORIES = [
-  { id: 'all',          label: 'All Products'   },
-  { id: 'vacuum-fryer', label: 'Vacuum Fryer'   },
-  { id: 'vacuum-dryer', label: 'Vacuum Dryer'   },
-  { id: 'spray-dryer',  label: 'Spray Dryer'    },
-  { id: 'freeze-dryer', label: 'Freeze Dryer'   },
-  { id: 'retort',       label: 'Retort Machine' },
-  { id: 'other',        label: 'Other'          },
+  { id: 'all',          label: 'All Products'       },
+  { id: 'retort',       label: 'Water Retort'       },
+  { id: 'vacuum-fryer', label: 'Vacuum Fryer'       },
+  { id: 'freeze-dryer', label: 'Freeze Dryer'       },
+  { id: 'spray-dryer',  label: 'Spray Dryer'        },
+  { id: 'vacuum-dryer', label: 'Cabinet Dryer'      },
+  { id: 'other',        label: 'Auxiliary Equipment'},
 ]
 
 const MACHINE = {
-  'vacuum-dryer': { img: '/images/equip1.png', name: 'Vacuum Dryer',        desc: 'Gently removes moisture at low pressure, preserving natural color, aroma, and nutritional content.' },
+  'vacuum-dryer': { img: '/images/equip1.png', name: 'Cabinet Dryer',       desc: 'Gently removes moisture at low pressure, preserving natural color, aroma, and nutritional content.' },
   'vacuum-fryer': { img: '/images/equip1.png', name: 'Vacuum Fryer',        desc: 'Fries produce at low temperatures under vacuum, locking in nutrients and flavor while reducing oil absorption.' },
   'spray-dryer':  { img: '/images/equip1.png', name: 'Spray Dryer',         desc: 'Converts liquid extracts into fine, shelf-stable powder through rapid hot-air atomization.' },
   'freeze-dryer': { img: '/images/equip1.png', name: 'Freeze Dryer',        desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
-  'retort':       { img: '/images/equip1.png', name: 'Water Retort Machine', desc: 'Sterilizes sealed food packages with pressurized hot water, ensuring commercial sterility and long shelf life.' },
-  'other':        { img: '/images/equip1.png', name: 'Other Equipment',      desc: 'Produced using specialized food processing equipment available at the CFIC facility.' },
+  'retort':       { img: '/images/equip1.png', name: 'Water Retort',          desc: 'Sterilizes sealed food packages with pressurized hot water, ensuring commercial sterility and long shelf life.' },
+  'other':        { img: '/images/equip1.png', name: 'Auxiliary Equipment',  desc: 'Produced using specialized food processing equipment available at the CFIC facility.' },
 }
 
 const PRODUCTS = [
   {
-    img: '/images/productIMG1.jpg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
+    img: '/images/product-dried-pineapple.jpg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
     title: 'Dried Pineapple Slices',
     desc:  'Naturally sweet and chewy dried pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG2.jpg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
+    img: '/images/product-dried-mango.jpeg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
     title: 'Dried Mango Strips',
     desc:  'Tender dried mango strips retaining natural sweetness and tropical aroma through gentle vacuum drying.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG3.jpg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
+    img: '/images/product-dried-banana.jpeg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
     title: 'Banana Chips',
     desc:  'Light and crispy banana chips fried at low temperature to preserve color, taste, and nutritional value.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG4.jpg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
+    img: '/images/product-dried-jackfruit.jpeg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
     title: 'Jackfruit Chips',
     desc:  'Golden jackfruit chips with natural sweetness intact, produced using vacuum frying for a healthier crunch.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG1.jpg', badge: 'Spray Dried',     category: 'spray-dryer',
+    img: '/images/product-calamansi-powder.jpeg', badge: 'Spray Dried',     category: 'spray-dryer',
     title: 'Calamansi Powder',
     desc:  'Fine citrus powder spray-dried from fresh calamansi juice, perfect for instant beverages and food seasoning.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG2.jpg', badge: 'Freeze Dried',    category: 'freeze-dryer',
+    img: '/images/product-freeze-dried-durian.jpeg', badge: 'Freeze Dried',    category: 'freeze-dryer',
     title: 'Freeze-Dried Durian',
     desc:  'Crisp freeze-dried durian cubes that fully preserve the fruit\'s signature aroma, flavor, and nutrients.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG3.jpg', badge: 'Retort Processed', category: 'retort',
+    img: '/images/product-adobo.jpeg', badge: 'Retort Processed', category: 'retort',
     title: 'Ready-to-Eat Adobo',
     desc:  'Shelf-stable traditional Filipino adobo processed through retort sterilization for convenience and long shelf life.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/productIMG4.jpg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
+    img: '/images/product-sweetpotato-chips.jpeg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
     title: 'Sweet Potato Chips',
     desc:  'Vibrant sweet potato chips vacuum fried to preserve their natural color and deliver a satisfying low-oil crunch.',
     credit: 'Developed by CFIC',
@@ -126,7 +126,7 @@ export default function Products() {
 
           {/* Sidebar */}
           <aside className="products-sidebar">
-            <p className="sidebar-heading">Filter by Machine</p>
+            <p className="sidebar-heading"> DOST-Food Processing Equipment</p>
             <ul className="sidebar-list">
               {CATEGORIES.map(({ id, label }) => (
                 <li key={id}>

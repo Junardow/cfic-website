@@ -24,7 +24,7 @@ const SERVICES = [
 
 const PRODUCTS = [
   {
-    img:    '/images/productIMG1.jpg',
+    img:    '/images/product-dried-pineapple.jpg',
     badge:  'Vacuum Dried',
     title:  'Dried Pineapple Slices',
     desc:   'Naturally sweet and chewy dried pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
@@ -32,7 +32,7 @@ const PRODUCTS = [
     machine: { img: '/images/equip1.png', name: 'Vacuum Dryer', desc: 'Gently removes moisture at low pressure, preserving the natural color, aroma, and nutritional content of fruits and vegetables.' },
   },
   {
-    img:    '/images/productIMG2.jpg',
+    img:    '/images/product-calamansi-powder.jpeg',
     badge:  'Spray Dried',
     title:  'Calamansi Powder',
     desc:   'Fine citrus powder spray-dried from fresh calamansi juice, perfect for instant beverages and food seasoning.',
@@ -40,7 +40,7 @@ const PRODUCTS = [
     machine: { img: '/images/equip1.png', name: 'Spray Dryer', desc: 'Converts liquid food extracts into fine, shelf-stable powder through rapid hot-air atomization while retaining bioactive compounds.' },
   },
   {
-    img:    '/images/productIMG3.jpg',
+    img:    '/images/product-freeze-dried-durian.jpeg',
     badge:  'Freeze Dried',
     title:  'Freeze-Dried Durian',
     desc:   'Crisp freeze-dried durian cubes that fully preserve the fruit\'s signature aroma, flavor, and nutrients.',
@@ -48,7 +48,7 @@ const PRODUCTS = [
     machine: { img: '/images/equip1.png', name: 'Freeze Dryer', desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
   },
   {
-    img:    '/images/productIMG4.jpg',
+    img:    '/images/product-dried-banana.jpeg',
     badge:  'Vacuum Fried',
     title:  'Banana Chips',
     desc:   'Light and crispy banana chips fried at low temperature to preserve color, taste, and nutritional value.',
@@ -59,7 +59,7 @@ const PRODUCTS = [
 
 const TEAM_MEMBERS = [
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-cutamora.png',
     name:      'CUTAMORA, Genesis Jared A.',
     role:      'Assistant Professor 1 / Center Chief,  Caraga Food Innovation Center (CFIC), CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
@@ -68,7 +68,7 @@ const TEAM_MEMBERS = [
     skills:    ['Leadership', 'Food Innovation', 'Research Management', 'Policy Development'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-modina.png',
     name:      'MODINA, Lix B.',
     role:      'Assistant Professor 1 / TTLO College Intellectual Property Coordinator, CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
@@ -77,7 +77,7 @@ const TEAM_MEMBERS = [
     skills:    ['R&D', 'Process Engineering', 'HACCP', 'Product Development'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-galang.png',
     name:      'GALANG, Marie Bless B.',
     role:      'Assistant Professor 1',
     education: 'Doctor of Philosophy in Food Science, University of the Philippines Los Baños',
@@ -86,7 +86,7 @@ const TEAM_MEMBERS = [
     skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
   },
   {
-    img:       '/images/aboutIMG.png',
+    img:       '/images/team-alambatin.png',
     name:      'ALAMBATIN, Peth Trixia Brooxs C.',
     role:      'Instructor 1',
     education: 'Master of Science in Food Science, University of the Philippines Mindanao',
@@ -129,8 +129,8 @@ function HeroSection() {
               Food<br />Innovation Center
             </h1>
             <p className="hero-sub">
-              Empowering local food enterprises through research,<br />
-              technology, and community-driven innovation.
+              Transforming concepts into products,<br />
+              making local innovations work.
             </p>
             <div className="hero-actions">
               <a href="#programs" className="btn-primary">Explore Services</a>
@@ -276,7 +276,7 @@ function AboutSection() {
 
               <div className="about-image-wrap">
                 <img
-                  src="/images/aboutIMG.png"
+                  src="/images/team.png"
                   alt="About the Caraga Food Innovation Center"
                   className="about-img"
                   onError={e => { e.currentTarget.style.display = 'none' }}
@@ -415,8 +415,7 @@ function ProductsSection() {
             <span className="section-label">Our Products</span>
             <h2 className="section-heading">Featured Food Innovations</h2>
             <p className="products-desc">
-              Our food products are carefully developed using advanced technology
-              and expertise, ready for production and market launch.
+              Each product is developed using the latest technology to ensure it meets high standards and is ready for large-scale production today.
             </p>
           </div>
           <div className="products-header-right">
@@ -546,91 +545,91 @@ const EQUIPMENT_LIST = [
   {
     img:   '/images/equip1.png',
     title: 'Vacuum Fryer Machine',
-    desc:  'A vacuum fryer processes fruits and vegetables at low temperatures, preserving natural color, flavor, and nutrients while producing high-quality crispy snacks.',
-    highlight: 'Vacuum frying reduces oil absorption and locks in natural flavor, giving you healthier and premium quality snacks.',
+    desc:  'Used in deep-fat frying under reduced pressure (vacuum), which allows use of lower temperatures during frying (usually 90-120°C) as compared to conventional frying.',
+    highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Low-Temperature Frying',       desc: 'Fries at reduced heat to protect delicate produce' },
-      { title: 'Retains Nutrients & Color',     desc: 'Preserves vitamins and vibrant natural hues'       },
-      { title: 'Crispy & Healthy Snacks',       desc: 'Achieves crunch with minimal oil absorption'       },
-      { title: 'Ideal for Fruits & Vegetables', desc: 'Suited for a wide range of fresh produce'          },
+      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
+      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Inclusion', desc: 'LPG'                                      },
+      { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/eq1_prod1.png', label: 'Banana Chips'       },
-      { img: '/images/eq1_prod2.png', label: 'Jackfruit Chips'    },
-      { img: '/images/eq1_prod3.png', label: 'Sweet Potato Chips' },
-      { img: '/images/eq1_prod4.png', label: 'Apple Chips'        },
+      { img: '/images/sweetpotato-chips.png', label: 'Sweet Potato Chips' },
+      { img: '/images/banana-chips.png',      label: 'Banana Chips'       },
+      { img: '/images/jackfruit-chips.png',   label: 'Jackfruit Chips'    },
+      { img: '/images/taro-chips.png',        label: 'Taro Chips'         },
     ],
   },
   {
     img:   '/images/equip1.png',
     title: 'Spray Dryer',
     desc:  'A spray dryer converts liquid food extracts into fine powders by atomizing them into a hot-air chamber, ideal for producing instant beverage mixes and food additives.',
-    highlight: 'Spray drying preserves the bioactive compounds in liquid extracts, extending shelf life while maintaining nutritional quality.',
+    highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Powder Conversion',        desc: 'Turns liquid extracts into fine, free-flowing powder'   },
-      { title: 'Extended Shelf Life',      desc: 'Removes moisture to prevent microbial growth'            },
-      { title: 'Nutrient Preservation',    desc: 'Rapid drying minimizes heat damage to nutrients'         },
-      { title: 'Versatile Applications',   desc: 'Suitable for juices, milk, herbs, and food additives'    },
+      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
+      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Inclusion', desc: 'LPG'                                      },
+      { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/eq1_prod1.png', label: 'Calamansi Powder'  },
-      { img: '/images/eq1_prod2.png', label: 'Malunggay Powder'  },
-      { img: '/images/eq1_prod3.png', label: 'Coconut Milk Powder'},
-      { img: '/images/eq1_prod4.png', label: 'Instant Ginger Tea'},
+      { img: '/images/squash-powder.png',    label: 'Squash Powder'    },
+      { img: '/images/papaya-powder.png',    label: 'Papaya Powder'    },
+      { img: '/images/pineapple-powder.png', label: 'Pineapple Powder' },
+      { img: '/images/cassava-powder.png',   label: 'Cassava Powder'   },
     ],
   },
   {
     img:   '/images/equip1.png',
     title: 'Freeze Dryer',
     desc:  'A freeze dryer removes moisture from food through sublimation under vacuum conditions, producing shelf-stable products that fully retain their original taste, texture, and nutritional content.',
-    highlight: 'Freeze drying is the gold standard for preserving food quality — products rehydrate almost perfectly to their original state.',
+    highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Sublimation Drying',       desc: 'Ice converts directly to vapor with no liquid phase'    },
-      { title: 'Maximum Nutrient Retention', desc: 'Cold process protects heat-sensitive vitamins'         },
-      { title: 'Long Shelf Life',           desc: 'Products last years without refrigeration'              },
-      { title: 'Excellent Rehydration',     desc: 'Restores near-original texture when water is added'    },
+      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
+      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Inclusion', desc: 'LPG'                                      },
+      { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/eq1_prod1.png', label: 'Freeze-Dried Durian'   },
-      { img: '/images/eq1_prod2.png', label: 'Freeze-Dried Mango'    },
-      { img: '/images/eq1_prod3.png', label: 'Freeze-Dried Rambutan' },
-      { img: '/images/eq1_prod4.png', label: 'Freeze-Dried Herbs'    },
+      { img: '/images/freeze-dried-banana.png',    label: 'Freeze-Dried Banana'    },
+      { img: '/images/freeze-dried-pineapple.png', label: 'Freeze-Dried Pineapple' },
+      { img: '/images/freeze-dried-papaya.png',    label: 'Freeze-Dried Papaya'    },
+      { img: '/images/freeze-dried-jackfruit.png', label: 'Freeze-Dried Jackfruit' },
     ],
   },
   {
     img:   '/images/equip1.png',
     title: 'Cabinet Dryer',
     desc:  'A cabinet dryer uses controlled hot-air circulation to gently dehydrate fruits, vegetables, and herbs, producing consistent, shelf-stable dried food products.',
-    highlight: 'Cabinet drying is an energy-efficient method that delivers uniform moisture removal across large batches of produce.',
+    highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Uniform Air Circulation',  desc: 'Even heat distribution across all trays'                },
-      { title: 'Batch Processing',         desc: 'Handles large volumes in a single drying cycle'         },
-      { title: 'Adjustable Temperature',   desc: 'Precise control for different types of produce'         },
-      { title: 'Low Operating Cost',       desc: 'Energy-efficient design reduces production expenses'     },
+      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
+      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Inclusion', desc: 'LPG'                                      },
+      { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/eq1_prod1.png', label: 'Dried Pineapple'    },
-      { img: '/images/eq1_prod2.png', label: 'Dried Banana'       },
-      { img: '/images/eq1_prod3.png', label: 'Dried Herbs'        },
-      { img: '/images/eq1_prod4.png', label: 'Dried Vegetables'   },
+      { img: '/images/cabinet-dried-okra.png',    label: 'Dried Okra'         },
+      { img: '/images/cabinet-dried-carrots.png', label: 'Dried Carrots'      },
+      { img: '/images/cabinet-dried-string-beans.png', label: 'Dried String Beans' },
+      { img: '/images/cabinet-dried-cassava.png',     label: 'Dried Cassava'      },
     ],
   },
   {
     img:   '/images/equip1.png',
     title: 'Water Retort Machine',
     desc:  'A water retort sterilizes packaged food products using pressurized hot water, ensuring commercial sterility and an extended shelf life without the need for refrigeration.',
-    highlight: 'Retort processing enables the production of ready-to-eat meals that are shelf-stable, safe, and convenient for consumers.',
+    highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Commercial Sterilization', desc: 'Eliminates all harmful pathogens in sealed packaging'   },
-      { title: 'Shelf-Stable Products',    desc: 'No refrigeration needed — ideal for distribution'       },
-      { title: 'Uniform Heat Transfer',    desc: 'Water medium ensures even heat penetration'             },
-      { title: 'Flexible Packaging',       desc: 'Compatible with pouches, cans, and jars'                },
+      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
+      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Inclusion', desc: 'LPG'                                      },
+      { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/eq1_prod1.png', label: 'Ready-to-Eat Adobo'  },
-      { img: '/images/eq1_prod2.png', label: 'Canned Bangus'        },
-      { img: '/images/eq1_prod3.png', label: 'Retort Dinuguan'      },
-      { img: '/images/eq1_prod4.png', label: 'Packaged Sinigang'    },
+      { img: '/images/retort-jackfruit.png', label: 'Canned Jackfruit'  },
+      { img: '/images/retort-pineapple.png', label: 'Canned Pineapple' },
+      { img: '/images/retort-karlang.png',   label: 'Karlang in Brine' },
+      { img: '/images/retort-squash.png',    label: 'Squash in Brine'  },
     ],
   },
 ]
