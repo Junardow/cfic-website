@@ -30,9 +30,10 @@ export default function Footer() {
 
         <div className="footer-contact">
           <h4>Contact</h4>
-          <p>Caraga Food Innovation Center</p>
-          <p>Caraga State University, Butuan City</p>
-          <p>Caraga Region, Philippines</p>
+          <p>Building 7, Caraga State University</p>
+          <p>Ampayon, Butuan City</p>
+          <p>caragafic@carsu.edu.ph</p>
+          <p>+63 969 209 8967</p>
         </div>
       </div>
 
