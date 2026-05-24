@@ -575,8 +575,8 @@ const EQUIPMENT_LIST = [
     desc:  'A freeze dryer removes moisture from food through sublimation under vacuum conditions, producing shelf-stable products that fully retain their original taste, texture, and nutritional content.',
     highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
-      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Capacity',  desc: '5 kilograms'                        },
+      { title: 'Rate',      desc: '₱250.00 per hour'                         },
       { title: 'Inclusion', desc: 'LPG'                                      },
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
@@ -593,8 +593,8 @@ const EQUIPMENT_LIST = [
     desc:  'A cabinet dryer uses controlled hot-air circulation to gently dehydrate fruits, vegetables, and herbs, producing consistent, shelf-stable dried food products.',
     highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
-      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Capacity',  desc: '30 kilograms'                        },
+      { title: 'Rate',      desc: '₱250.00 per hour'                         },
       { title: 'Inclusion', desc: 'LPG'                                      },
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
@@ -611,8 +611,8 @@ const EQUIPMENT_LIST = [
     desc:  'A water retort sterilizes packaged food products using pressurized hot water, ensuring commercial sterility and an extended shelf life without the need for refrigeration.',
     highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
-      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Capacity',  desc: '250g retort pouch – 80 pcs | 150g retort pouch – 100 pcs | 8 oz glass jars – 100 pcs' },
+      { title: 'Rate',      desc: '₱250.00 per hour'                         },
       { title: 'Inclusion', desc: 'LPG'                                      },
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
