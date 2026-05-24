@@ -611,9 +611,7 @@ const EQUIPMENT_LIST = [
     desc:  'A water retort sterilizes packaged food products using pressurized hot water, ensuring commercial sterility and an extended shelf life without the need for refrigeration.',
     highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Capacity',  desc: '250g retort pouch – 80 pcs
-150g retort pouch – 100 pcs
-8 oz glass jars – 100 pcs' },
+      { title: 'Capacity',  desc: '250g retort pouch – 80 pcs | 150g retort pouch – 100 pcs | 8 oz glass jars – 100 pcs' },
       { title: 'Rate',      desc: '₱250.00 per hour'                         },
       { title: 'Inclusion', desc: 'LPG'                                      },
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
