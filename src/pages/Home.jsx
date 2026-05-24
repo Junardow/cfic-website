@@ -268,7 +268,7 @@ function AboutSection() {
 
               <div className="about-image-wrap">
                 <img
-                  src="/images/team.png"
+                  src="/images/about-img.JPG"
                   alt="About the Caraga Food Innovation Center"
                   className="about-img"
                   onError={e => { e.currentTarget.style.display = 'none' }}
