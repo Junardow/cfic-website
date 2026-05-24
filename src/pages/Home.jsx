@@ -599,10 +599,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/cabinet-dried-okra.png',    label: 'Dehydrated Okra'         },
-      { img: '/images/cabinet-dried-carrots.png', label: 'Dehydrated Carrots'      },
-      { img: '/images/cabinet-dried-string-beans.png', label: 'Dehydrated String Beans' },
-      { img: '/images/cabinet-dried-cassava.png',     label: 'Dehydrated Cassava'      },
+      { img: '/images/dehydrated-grape.jpg',      label: 'Dehydrated Grape'       },
+      { img: '/images/dehydrated-mango.webp',     label: 'Dehydrated Mango'       },
+      { img: '/images/dehydrated-pineapple.jpg',  label: 'Dehydrated Pineapple'   },
+      { img: '/images/dehydrated-strawberry.jpg', label: 'Dehydrated Strawberry'  },
     ],
   },
   {
@@ -617,10 +617,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/retort-jackfruit.png', label: 'Canned Jackfruit'  },
-      { img: '/images/retort-pineapple.png', label: 'Canned Pineapple' },
-      { img: '/images/retort-karlang.png',   label: 'Karlang in Brine' },
-      { img: '/images/retort-squash.png',    label: 'Squash in Brine'  },
+      { img: '/images/apple-jam.webp',       label: 'Apple Jam'        },
+      { img: '/images/canned-sardines.webp', label: 'Canned Sardines'  },
+      { img: '/images/fruit-cocktail.png',   label: 'Fruit Cocktail'   },
+      { img: '/images/strawberry-jam.jpg',   label: 'Strawberry Jam'   },
     ],
   },
 ]
