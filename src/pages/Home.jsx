@@ -8,9 +8,9 @@ import '../styles/home.css'
 
 const SLIDES = [
   '/images/hero-1.jpg',
-  '/images/hero-2.webp',
+  '/images/hero-2.JPG',
   '/images/hero-3.JPG',
-  '/images/hero-4.JPG',
+  '/images/hero-4.webp',
 ]
 const HOLD_MS = 5000
 const FADE_MS = 1500

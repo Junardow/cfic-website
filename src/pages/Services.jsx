@@ -95,7 +95,7 @@ export default function Services() {
     <main>
 
       {/* ── Hero ── */}
-      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero-2.webp)' }}>
+      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero-4.webp)' }}>
         <div className="services-page-hero-overlay">
           <div className="services-page-hero-content">
             <span className="hero-page-eyebrow">What We Offer</span>
