@@ -545,10 +545,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/sweetpotato-chips.png', label: 'Sweet Potato Chips' },
-      { img: '/images/banana-chips.png',      label: 'Banana Chips'       },
-      { img: '/images/jackfruit-chips.png',   label: 'Jackfruit Chips'    },
-      { img: '/images/taro-chips.png',        label: 'Taro Chips'         },
+      { img: '/images/mixed-veggie-chips.png', label: 'Mixed Veggie Chips' },
+      { img: '/images/sweetpotato-chips.png',  label: 'Sweet Potato Chips' },
+      { img: '/images/mushroom-chips.png',     label: 'Mushroom Chips'     },
+      { img: '/images/okra-chips.png',         label: 'Okra Chips'         },
     ],
   },
   {
