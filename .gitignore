@@ -4,5 +4,3 @@ dist/
 .claude/
 *.local
 /images/
-*.env
-.env*
