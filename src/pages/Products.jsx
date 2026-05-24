@@ -106,7 +106,7 @@ export default function Products() {
     <main>
 
       {/* ── Hero ── */}
-      <div className="products-page-hero" style={{ backgroundImage: 'url(/images/hero3.png)' }}>
+      <div className="products-page-hero" style={{ backgroundImage: 'url(/images/hero-4.JPG)' }}>
         <div className="products-page-hero-overlay">
           <div className="products-page-hero-content">
             <span className="hero-page-eyebrow">Food Innovations</span>

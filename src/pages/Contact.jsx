@@ -70,7 +70,7 @@ export default function Contact() {
     <main>
 
       {/* ── Hero ── */}
-      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero2.webp)' }}>
+      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero-4.JPG)' }}>
         <div className="services-page-hero-overlay">
           <div className="services-page-hero-content">
             <span className="hero-page-eyebrow">Reach Out</span>

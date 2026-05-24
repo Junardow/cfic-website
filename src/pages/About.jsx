@@ -13,7 +13,7 @@ export default function About() {
     <main>
 
       {/* ── Hero ── */}
-      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero4.jpg)' }}>
+      <div className="services-page-hero" style={{ backgroundImage: 'url(/images/hero-3.JPG)' }}>
         <div className="services-page-hero-overlay">
           <div className="services-page-hero-content">
             <span className="hero-page-eyebrow">Who We Are</span>
