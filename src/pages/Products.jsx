@@ -23,15 +23,15 @@ const MACHINE = {
 
 const PRODUCTS = [
   {
-    img: '/images/product-dried-pineapple.jpg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
-    title: 'Dried Pineapple Slices',
-    desc:  'Naturally sweet and chewy dried pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
+    img: '/images/product-dried-pineapple.jpg', badge: 'Cabinet Dried',    category: 'vacuum-dryer',
+    title: 'Dehydrated Pineapple Slices',
+    desc:  'Naturally sweet and chewy dehydrated pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
     credit: 'Developed by CFIC',
   },
   {
-    img: '/images/product-dried-mango.jpeg', badge: 'Vacuum Dried',    category: 'vacuum-dryer',
-    title: 'Dried Mango Strips',
-    desc:  'Tender dried mango strips retaining natural sweetness and tropical aroma through gentle vacuum drying.',
+    img: '/images/product-dried-mango.jpeg', badge: 'Cabinet Dried',    category: 'vacuum-dryer',
+    title: 'Dehydrated Mango Strips',
+    desc:  'Tender dehydrated mango strips retaining natural sweetness and tropical aroma through gentle vacuum dehydration.',
     credit: 'Developed by CFIC',
   },
   {

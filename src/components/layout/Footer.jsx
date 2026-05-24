@@ -38,6 +38,11 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Caraga Food Innovation Center. All rights reserved.</p>
+        <div className="footer-partner-logos">
+          <img src="/images/CSU-logo.png"          alt="CSU"         />
+          <img src="/images/dost-logo.png"          alt="DOST"        />
+          <img src="/images/consortium-logo.png"    alt="Consortium"  />
+        </div>
       </div>
     </footer>
   )

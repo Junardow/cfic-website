@@ -16,7 +16,7 @@ const HOLD_MS = 5000
 const FADE_MS = 1500
 
 const SERVICES = [
-  { img: '/images/serviceIMG1.jpg', category: 'Rental',        title: 'Rental Equipment and Facility',   anchor: 'rental'       },
+  { img: '/images/serviceIMG1.png', category: 'Rental',        title: 'Rental Equipment and Facility',   anchor: 'rental'       },
   { img: '/images/serviceIMG2.png', category: 'Consultancy',   title: 'Technical Assistance',             anchor: 'consultancy'  },
   { img: '/images/serviceIMG3.jpg', category: 'Technological', title: 'Technology Transfer',              anchor: 'technology'   },
   { img: '/images/serviceIMG4.png', category: 'Research',      title: 'Contract Research & Development',  anchor: 'research'     },
@@ -25,8 +25,8 @@ const SERVICES = [
 const PRODUCTS = [
   {
     img:    '/images/product-dried-pineapple.jpg',
-    badge:  'Vacuum Dried',
-    title:  'Dried Pineapple Slices',
+    badge:  'Cabinet Dried',
+    title:  'Dehydrated Pineapple Slices',
     desc:   'Naturally sweet and chewy dried pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
     credit: 'Developed by CFIC',
     machine: { img: '/images/equip1.png', name: 'Vacuum Dryer', desc: 'Gently removes moisture at low pressure, preserving the natural color, aroma, and nutritional content of fruits and vegetables.' },
@@ -63,36 +63,32 @@ const TEAM_MEMBERS = [
     name:      'CUTAMORA, Genesis Jared A.',
     role:      'Assistant Professor 1 / Center Chief,  Caraga Food Innovation Center (CFIC), CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
-    year:      '2018',
     email:     'genesis.cutamora@cfic.gov.ph',
-    skills:    ['Leadership', 'Food Innovation', 'Research Management', 'Policy Development'],
+    skills:    ['Functional Properties', 'Food product development', 'Food Processing Technologies', 'Waste Valorization', 'Meat Quality', 'Post Harvest Handling Technology'],
   },
   {
     img:       '/images/team-modina.png',
     name:      'MODINA, Lix B.',
     role:      'Assistant Professor 1 / TTLO College Intellectual Property Coordinator, CAA',
     education: 'Master of Science in Food Science & Technology, Visayas State University',
-    year:      '2018',
     email:     'lix.modina@cfic.gov.ph',
-    skills:    ['R&D', 'Process Engineering', 'HACCP', 'Product Development'],
+    skills:    ['Food Product Development'],
   },
   {
     img:       '/images/team-galang.png',
     name:      'GALANG, Marie Bless B.',
     role:      'Assistant Professor 1',
     education: 'Doctor of Philosophy in Food Science, University of the Philippines Los Baños',
-    year:      '2025',
     email:     'marie.galang@cfic.gov.ph',
-    skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
+    skills:    ['Food Biochemistry', 'Applied Nutrition', 'Process and Product Development'],
   },
   {
     img:       '/images/team-alambatin.png',
     name:      'ALAMBATIN, Peth Trixia Brooxs C.',
     role:      'Instructor 1',
     education: 'Master of Science in Food Science, University of the Philippines Mindanao',
-    year:      'ongoing',
     email:     'peth.alambatin@cfic.gov.ph',
-    skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
+    skills:    ['Nutraceuticals', 'Functional Food', 'Food Ingredients'],
   },
 ]
 
@@ -180,10 +176,6 @@ function TeamSlide({ member }) {
           <div className="member-detail-row">
             <dt>Education</dt>
             <dd>{member.education}</dd>
-          </div>
-          <div className="member-detail-row">
-            <dt>Year Graduated</dt>
-            <dd>{member.year}</dd>
           </div>
           <div className="member-detail-row">
             <dt>Contact</dt>
@@ -342,8 +334,7 @@ function ServicesSection() {
             <span className="section-label">Our Services</span>
             <h2 className="section-heading">How can we help you?</h2>
             <p className="services-desc">
-              We provide equipment, expertise, and support to help entrepreneurs,
-              businesses, and researchers develop high-quality, innovative food
+              We provide equipment, expertise, and support to help MSMEs, and researchers develop high-quality, innovative food
               products.
             </p>
           </div>
@@ -415,7 +406,7 @@ function ProductsSection() {
             <span className="section-label">Our Products</span>
             <h2 className="section-heading">Featured Food Innovations</h2>
             <p className="products-desc">
-              Each product is developed using the latest technology to ensure it meets high standards and is ready for large-scale production today.
+              Each product is developed using the DOST-developed food processing equipment to ensure it meets the standard and is ready for large-scale production today.
             </p>
           </div>
           <div className="products-header-right">
@@ -608,10 +599,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/cabinet-dried-okra.png',    label: 'Dried Okra'         },
-      { img: '/images/cabinet-dried-carrots.png', label: 'Dried Carrots'      },
-      { img: '/images/cabinet-dried-string-beans.png', label: 'Dried String Beans' },
-      { img: '/images/cabinet-dried-cassava.png',     label: 'Dried Cassava'      },
+      { img: '/images/cabinet-dried-okra.png',    label: 'Dehydrated Okra'         },
+      { img: '/images/cabinet-dried-carrots.png', label: 'Dehydrated Carrots'      },
+      { img: '/images/cabinet-dried-string-beans.png', label: 'Dehydrated String Beans' },
+      { img: '/images/cabinet-dried-cassava.png',     label: 'Dehydrated Cassava'      },
     ],
   },
   {

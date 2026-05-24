@@ -9,7 +9,7 @@ const TEAM_MEMBERS = [
     education: 'Master of Science in Food Science & Technology, Visayas State University',
     year:      '2018',
     email:     'genesis.cutamora@cfic.gov.ph',
-    skills:    ['Leadership', 'Food Innovation', 'Research Management', 'Policy Development'],
+    skills:    ['Functional Properties', 'Food product development', 'Food Processing Technologies', 'Waste Valorization', 'Meat Quality', 'Post Harvest Handling Technology'],
   },
   {
     img:       '/images/team-modina.png',
@@ -18,7 +18,7 @@ const TEAM_MEMBERS = [
     education: 'Master of Science in Food Science & Technology, Visayas State University',
     year:      '2018',
     email:     'lix.modina@cfic.gov.ph',
-    skills:    ['R&D', 'Process Engineering', 'HACCP', 'Product Development'],
+    skills:    ['Food Product Development'],
   },
   {
     img:       '/images/team-galang.png',
@@ -27,7 +27,7 @@ const TEAM_MEMBERS = [
     education: 'Doctor of Philosophy in Food Science, University of the Philippines Los Baños',
     year:      '2025',
     email:     'marie.galang@cfic.gov.ph',
-    skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
+    skills:    ['Food Biochemistry', 'Applied Nutrition', 'Process and Product Development'],
   },
   {
     img:       '/images/team-alambatin.png',
@@ -36,7 +36,7 @@ const TEAM_MEMBERS = [
     education: 'Master of Science in Food Science, University of the Philippines Mindanao',
     year:      'Ongoing',
     email:     'peth.alambatin@cfic.gov.ph',
-    skills:    ['Technology Transfer', 'Training & Development', 'Business Dev', 'Quality Assurance'],
+    skills:    ['Nutraceuticals', 'Functional Food', 'Food Ingredients'],
   },
 ]
 
@@ -51,7 +51,7 @@ export default function Team() {
             <span className="hero-page-eyebrow">The People Behind CFIC</span>
             <h1 className="hero-page-title">Meet the Team</h1>
             <p className="hero-page-sub">
-              Our team of dedicated food scientists, engineers, and specialists
+              Our team of dedicated food scientists and specialists
               work together to drive innovation and deliver quality service
               across the Caraga Region.
             </p>
@@ -91,10 +91,6 @@ export default function Team() {
                     <div className="team-card-row">
                       <dt>Education</dt>
                       <dd>{education}</dd>
-                    </div>
-                    <div className="team-card-row">
-                      <dt>Year</dt>
-                      <dd>{year}</dd>
                     </div>
                     <div className="team-card-row">
                       <dt>Contact</dt>

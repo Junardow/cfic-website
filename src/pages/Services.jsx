@@ -5,10 +5,10 @@ import '../styles/services.css'
 const SERVICES = [
   {
     id:       'rental',
-    img:      '/images/serviceIMG1.jpg',
+    img:      '/images/serviceIMG1.png',
     category: 'Rental',
     title:    'Rental Equipment and Facility',
-    desc:     'Access our state-of-the-art food processing equipment and pilot plant facilities. Ideal for entrepreneurs and businesses that need professional-grade machinery without the capital investment.',
+    desc:     'Access our state-of-the-art DOST-developed food processing equipment and plant facilities. Ideal for entrepreneurs and businesses that need professional-grade machinery without the capital investment.',
     items:    ['Vacuum Fryer', 'Spray Dryer', 'Freeze Dryer', 'Retort Machine', 'Water Retort Machine', 'Cabinet Dryer'],
   },
   {

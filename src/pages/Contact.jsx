@@ -11,7 +11,7 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: 'Address',
-    value: 'Caraga State University, Ampayon, Butuan City, Agusan del Norte, Caraga Region, Philippines',
+    value: 'Building 7, Caraga State University, Ampayon, Butuan City',
   },
   {
     icon: (
@@ -21,7 +21,7 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: 'Email',
-    value: 'cfic@carsu.edu.ph',
+    value: 'caragafic@carsu.edu.ph',
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: 'Phone',
-    value: '(085) 000-0000',
+    value: '+63 969 209 8967',
   },
   {
     icon: (

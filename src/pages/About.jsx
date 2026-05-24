@@ -2,7 +2,7 @@ import '../styles/services.css'
 import '../styles/about.css'
 
 const STATS = [
-  { value: '10+',  label: 'Years of Service'     },
+  { value: '8',  label: 'Years of Service'     },
   { value: '200+', label: 'Enterprises Assisted' },
   { value: '50+',  label: 'Products Developed'   },
   { value: '4',    label: 'Expert Researchers'   },
