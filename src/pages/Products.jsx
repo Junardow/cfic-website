@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { sendEmail } from '../utils/sendEmail'
 import '../styles/services.css'
 import '../styles/products.css'
 
@@ -66,8 +67,8 @@ const PRODUCTS = [
   },
   {
     img: '/images/product-sweetpotato-chips.jpeg', badge: 'Vacuum Fried',    category: 'vacuum-fryer',
-    title: 'Sweet Potato Chips',
-    desc:  'Vibrant sweet potato chips vacuum fried to preserve their natural color and deliver a satisfying low-oil crunch.',
+    title: 'Sweetpotato Chips',
+    desc:  'Vibrant sweetpotato chips vacuum fried to preserve their natural color and deliver a satisfying low-oil crunch.',
     credit: 'Developed by CFIC',
   },
 ]
@@ -80,6 +81,8 @@ export default function Products() {
   const [formMode,  setFormMode] = useState(false)
   const [form,      setForm]     = useState(EMPTY_FORM)
   const [sent,      setSent]     = useState(false)
+  const [sending,   setSending]  = useState(false)
+  const [error,     setError]    = useState('')
 
   const filtered = active === 'all'
     ? PRODUCTS
@@ -95,11 +98,21 @@ export default function Products() {
     setFormMode(false)
     setForm(EMPTY_FORM)
     setSent(false)
+    setError('')
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      await sendEmail({ fromName: form.name, fromEmail: form.email, subject: `Product Inquiry: ${selected.title}`, message: form.message })
+      setSent(true)
+    } catch {
+      setError('Failed to send. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -242,7 +255,10 @@ export default function Products() {
                       <textarea id="prd-msg" className="inq-textarea" placeholder="Tell us more about your inquiry..."
                         required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
                     </div>
-                    <button type="submit" className="inq-submit">Send Message →</button>
+                    {error && <p style={{ color: 'red', fontSize: '13px', marginBottom: '8px' }}>{error}</p>}
+                    <button type="submit" className="inq-submit" disabled={sending}>
+                      {sending ? 'Sending…' : 'Send Message →'}
+                    </button>
                   </form>
                 </>
               )

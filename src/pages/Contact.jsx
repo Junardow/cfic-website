@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/services.css'
 import '../styles/contact.css'
+import { sendEmail } from '../utils/sendEmail'
 
 const CONTACT_INFO = [
   {
@@ -56,14 +57,25 @@ const SUBJECTS = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const [form, setForm]       = useState({ name: '', email: '', subject: '', message: '' })
+  const [sent, setSent]       = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError]     = useState('')
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      await sendEmail({ fromName: form.name, fromEmail: form.email, subject: form.subject, message: form.message })
+      setSent(true)
+    } catch {
+      setError('Failed to send message. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -187,8 +199,9 @@ export default function Contact() {
                   />
                 </div>
 
-                <button type="submit" className="btn-pill contact-submit">
-                  Send Message →
+                {error && <p style={{ color: 'red', fontSize: '14px', marginBottom: '8px' }}>{error}</p>}
+                <button type="submit" className="btn-pill contact-submit" disabled={sending}>
+                  {sending ? 'Sending…' : 'Send Message →'}
                 </button>
               </form>
             )}

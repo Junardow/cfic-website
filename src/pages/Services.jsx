@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import '../styles/services.css'
+import { sendEmail } from '../utils/sendEmail'
 
 const SERVICES = [
   {
@@ -59,6 +60,8 @@ export default function Services() {
   const [inquiring, setInquiring] = useState(null)
   const [form, setForm]           = useState(EMPTY_FORM)
   const [sent, setSent]           = useState(false)
+  const [sending, setSending]     = useState(false)
+  const [error, setError]         = useState('')
 
   useEffect(() => {
     if (!hash) return
@@ -77,18 +80,29 @@ export default function Services() {
   function openInquiry(svc) {
     setForm({ ...EMPTY_FORM, subject: svc.title })
     setSent(false)
+    setError('')
     setInquiring(svc)
   }
 
   function closeInquiry() {
     setInquiring(null)
     setSent(false)
+    setError('')
     setForm(EMPTY_FORM)
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      await sendEmail({ fromName: form.name, fromEmail: form.email, subject: form.subject, message: form.message })
+      setSent(true)
+    } catch {
+      setError('Failed to send. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -250,7 +264,10 @@ export default function Services() {
                     />
                   </div>
 
-                  <button type="submit" className="inq-submit">Send Inquiry →</button>
+                  {error && <p style={{ color: 'red', fontSize: '13px', marginBottom: '8px' }}>{error}</p>}
+                  <button type="submit" className="inq-submit" disabled={sending}>
+                    {sending ? 'Sending…' : 'Send Inquiry →'}
+                  </button>
                 </form>
               </>
             )}

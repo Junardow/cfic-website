@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/home.css'
+import { sendEmail } from '../utils/sendEmail'
 
 // ─────────────────────────────────────────────────────────────
 // Section data  (kept at module level — no re-creation on render)
@@ -379,6 +380,8 @@ function ProductsSection() {
   const [formMode,  setFormMode]  = useState(false)
   const [form,      setForm]      = useState(EMPTY_PRD_FORM)
   const [sent,      setSent]      = useState(false)
+  const [sending,   setSending]   = useState(false)
+  const [error,     setError]     = useState('')
 
   useEffect(() => {
     document.body.style.overflow = selected ? 'hidden' : ''
@@ -390,11 +393,21 @@ function ProductsSection() {
     setFormMode(false)
     setForm(EMPTY_PRD_FORM)
     setSent(false)
+    setError('')
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      await sendEmail({ fromName: form.name, fromEmail: form.email, subject: `Product Inquiry: ${selected.title}`, message: form.message })
+      setSent(true)
+    } catch {
+      setError('Failed to send. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -489,7 +502,10 @@ function ProductsSection() {
                       <textarea id="prd-msg-h" className="inq-textarea" placeholder="Tell us more about your inquiry..."
                         required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
                     </div>
-                    <button type="submit" className="inq-submit">Send Message →</button>
+                    {error && <p style={{ color: 'red', fontSize: '13px', marginBottom: '8px' }}>{error}</p>}
+                    <button type="submit" className="inq-submit" disabled={sending}>
+                      {sending ? 'Sending…' : 'Send Message →'}
+                    </button>
                   </form>
                 </>
               )
@@ -563,10 +579,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/apple-powder.png',      label: 'Apple Powder'      },
-      { img: '/images/milk-powder.png',       label: 'Milk Powder'       },
-      { img: '/images/orange-powder.png',     label: 'Orange Powder'     },
-      { img: '/images/strawberry-powder.png', label: 'Strawberry Powder' },
+      { img: '/images/apple-powder.jpg',      label: 'Apple Powder'      },
+      { img: '/images/milk-powder.jpg',       label: 'Milk Powder'       },
+      { img: '/images/orange-powder.webp',     label: 'Orange Powder'     },
+      { img: '/images/strawberry-powder.jpeg', label: 'Strawberry Powder' },
     ],
   },
   {
@@ -582,7 +598,7 @@ const EQUIPMENT_LIST = [
     ],
     products: [
       { img: '/images/freeze-dried-banana.png',    label: 'Freeze-Dried Banana'    },
-      { img: '/images/freeze-dried-pineapple.png', label: 'Freeze-Dried Pineapple' },
+      { img: '/images/freeze-dried-pineapple.jpg', label: 'Freeze-Dried Pineapple' },
       { img: '/images/freeze-dried-papaya.png',    label: 'Freeze-Dried Papaya'    },
       { img: '/images/freeze-dried-jackfruit.png', label: 'Freeze-Dried Jackfruit' },
     ],
@@ -599,10 +615,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/cabinet-dried-okra.png',    label: 'Dehydrated Okra'         },
-      { img: '/images/cabinet-dried-carrots.png', label: 'Dehydrated Carrots'      },
-      { img: '/images/cabinet-dried-string-beans.png', label: 'Dehydrated String Beans' },
-      { img: '/images/cabinet-dried-cassava.png',     label: 'Dehydrated Cassava'      },
+      { img: '/images/dehydrated-grape.jpg',    label: 'Dehydrated Strawberry'         },
+      { img: '/images/dehydrated-pineapple.jpg', label: 'Dehydrated Pineapple'      },
+      { img: '/images/dehydrated-strawberry.jpg', label: 'Dehydrated Strawberry' },
+      { img: '/images/dehydrated-mango.webp',     label: 'Dehydrated Mango'      },
     ],
   },
   {
@@ -617,10 +633,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/retort-jackfruit.png', label: 'Canned Jackfruit'  },
-      { img: '/images/retort-pineapple.png', label: 'Canned Pineapple' },
-      { img: '/images/retort-karlang.png',   label: 'Karlang in Brine' },
-      { img: '/images/retort-squash.png',    label: 'Squash in Brine'  },
+      { img: '/images/apple-jam.webp', label: 'Apple Jam'  },
+      { img: '/images/strawberry-jam.jpg', label: 'Strawberry Jam' },
+      { img: '/images/fruit-cocktail.png',   label: 'Fruit Cocktail' },
+      { img: '/images/canned-sardines.webp',    label: 'Canned Sardines'  },
     ],
   },
 ]
