@@ -7,10 +7,10 @@ import '../styles/home.css'
 // ─────────────────────────────────────────────────────────────
 
 const SLIDES = [
-  '/images/hero1.jpg',
-  '/images/hero2.webp',
-  '/images/hero3.png',
-  '/images/hero4.jpg',
+  '/images/hero-1.jpg',
+  '/images/hero-2.webp',
+  '/images/hero-3.JPG',
+  '/images/hero-4.JPG',
 ]
 const HOLD_MS = 5000
 const FADE_MS = 1500
