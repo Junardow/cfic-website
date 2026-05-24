@@ -13,12 +13,12 @@ const CATEGORIES = [
 ]
 
 const MACHINE = {
-  'vacuum-dryer': { img: '/images/equip1.png', name: 'Cabinet Dryer',       desc: 'Gently removes moisture at low pressure, preserving natural color, aroma, and nutritional content.' },
-  'vacuum-fryer': { img: '/images/equip1.png', name: 'Vacuum Fryer',        desc: 'Fries produce at low temperatures under vacuum, locking in nutrients and flavor while reducing oil absorption.' },
-  'spray-dryer':  { img: '/images/equip1.png', name: 'Spray Dryer',         desc: 'Converts liquid extracts into fine, shelf-stable powder through rapid hot-air atomization.' },
-  'freeze-dryer': { img: '/images/equip1.png', name: 'Freeze Dryer',        desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
-  'retort':       { img: '/images/equip1.png', name: 'Water Retort',          desc: 'Sterilizes sealed food packages with pressurized hot water, ensuring commercial sterility and long shelf life.' },
-  'other':        { img: '/images/equip1.png', name: 'Auxiliary Equipment',  desc: 'Produced using specialized food processing equipment available at the CFIC facility.' },
+  'vacuum-dryer': { img: '/images/cebinet-dryer.png', name: 'Cabinet Dryer',       desc: 'Gently removes moisture at low pressure, preserving natural color, aroma, and nutritional content.' },
+  'vacuum-fryer': { img: '/images/vacuum-dryer.png', name: 'Vacuum Fryer',        desc: 'Fries produce at low temperatures under vacuum, locking in nutrients and flavor while reducing oil absorption.' },
+  'spray-dryer':  { img: '/images/spray-dryer.png', name: 'Spray Dryer',         desc: 'Converts liquid extracts into fine, shelf-stable powder through rapid hot-air atomization.' },
+  'freeze-dryer': { img: '/images/freeze-dryer.png', name: 'Freeze Dryer',        desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
+  'retort':       { img: '/images/water-retort.png', name: 'Water Retort',          desc: 'Sterilizes sealed food packages with pressurized hot water, ensuring commercial sterility and long shelf life.' },
+  'other':        { img: '', name: 'Auxiliary Equipment',  desc: 'Produced using specialized food processing equipment available at the CFIC facility.' },
 }
 
 const PRODUCTS = [
@@ -254,7 +254,7 @@ export default function Products() {
                   <p className="prd-overlay-side-label">Made Using</p>
                   <div className="prd-overlay-machine-img-wrap">
                     <img
-                      src={MACHINE[selected.category]?.img ?? '/images/equip1.png'}
+                      src={MACHINE[selected.category]?.img}
                       alt={MACHINE[selected.category]?.name}
                       className="prd-overlay-machine-img"
                       onError={e => { e.currentTarget.style.display = 'none' }}

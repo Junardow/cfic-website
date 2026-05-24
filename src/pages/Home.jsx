@@ -29,7 +29,7 @@ const PRODUCTS = [
     title:  'Dehydrated Pineapple Slices',
     desc:   'Naturally sweet and chewy dried pineapple slices, made to preserve flavor and nutrients for a delicious, healthy snack.',
     credit: 'Developed by CFIC',
-    machine: { img: '/images/equip1.png', name: 'Vacuum Dryer', desc: 'Gently removes moisture at low pressure, preserving the natural color, aroma, and nutritional content of fruits and vegetables.' },
+    machine: { img: '/images/cebinet-dryer.png', name: 'Cabinet Dryer', desc: 'Gently removes moisture through controlled hot-air circulation, preserving the natural color, aroma, and nutritional content of fruits and vegetables.' },
   },
   {
     img:    '/images/product-calamansi-powder.jpeg',
@@ -37,7 +37,7 @@ const PRODUCTS = [
     title:  'Calamansi Powder',
     desc:   'Fine citrus powder spray-dried from fresh calamansi juice, perfect for instant beverages and food seasoning.',
     credit: 'Developed by CFIC',
-    machine: { img: '/images/equip1.png', name: 'Spray Dryer', desc: 'Converts liquid food extracts into fine, shelf-stable powder through rapid hot-air atomization while retaining bioactive compounds.' },
+    machine: { img: '/images/spray-dryer.png', name: 'Spray Dryer', desc: 'Converts liquid food extracts into fine, shelf-stable powder through rapid hot-air atomization while retaining bioactive compounds.' },
   },
   {
     img:    '/images/product-freeze-dried-durian.jpeg',
@@ -45,7 +45,7 @@ const PRODUCTS = [
     title:  'Freeze-Dried Durian',
     desc:   'Crisp freeze-dried durian cubes that fully preserve the fruit\'s signature aroma, flavor, and nutrients.',
     credit: 'Developed by CFIC',
-    machine: { img: '/images/equip1.png', name: 'Freeze Dryer', desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
+    machine: { img: '/images/freeze-dryer.png', name: 'Freeze Dryer', desc: 'Removes moisture through sublimation under vacuum, producing shelf-stable food that rehydrates to near-original quality.' },
   },
   {
     img:    '/images/product-dried-banana.jpeg',
@@ -53,7 +53,7 @@ const PRODUCTS = [
     title:  'Banana Chips',
     desc:   'Light and crispy banana chips fried at low temperature to preserve color, taste, and nutritional value.',
     credit: 'Developed by CFIC',
-    machine: { img: '/images/equip1.png', name: 'Vacuum Fryer', desc: 'Fries produce at low temperatures under vacuum pressure, locking in nutrients, color, and flavor while reducing oil absorption.' },
+    machine: { img: '/images/vacuum-dryer.png', name: 'Vacuum Fryer', desc: 'Fries produce at low temperatures under vacuum pressure, locking in nutrients, color, and flavor while reducing oil absorption.' },
   },
 ]
 
@@ -534,7 +534,7 @@ function ProductsSection() {
 // ─────────────────────────────────────────────────────────────
 const EQUIPMENT_LIST = [
   {
-    img:   '/images/equip1.png',
+    img:   '/images/vacuum-dryer.png',
     title: 'Vacuum Fryer Machine',
     desc:  'Used in deep-fat frying under reduced pressure (vacuum), which allows use of lower temperatures during frying (usually 90-120°C) as compared to conventional frying.',
     highlight: 'Discount price applicable only for PWD and student.',
@@ -552,13 +552,13 @@ const EQUIPMENT_LIST = [
     ],
   },
   {
-    img:   '/images/equip1.png',
+    img:   '/images/spray-dryer.png',
     title: 'Spray Dryer',
     desc:  'A spray dryer converts liquid food extracts into fine powders by atomizing them into a hot-air chamber, ideal for producing instant beverage mixes and food additives.',
     highlight: 'Discount price applicable only for PWD and student.',
     features: [
-      { title: 'Capacity',  desc: '5–10.0 kilograms'                        },
-      { title: 'Rate',      desc: '₱275.00 per hour'                         },
+      { title: 'Capacity',  desc: '25 liters minimum'                        },
+      { title: 'Rate',      desc: '₱475.00 per hour'                         },
       { title: 'Inclusion', desc: 'LPG'                                      },
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
@@ -570,7 +570,7 @@ const EQUIPMENT_LIST = [
     ],
   },
   {
-    img:   '/images/equip1.png',
+    img:   '/images/freeze-dryer.png',
     title: 'Freeze Dryer',
     desc:  'A freeze dryer removes moisture from food through sublimation under vacuum conditions, producing shelf-stable products that fully retain their original taste, texture, and nutritional content.',
     highlight: 'Discount price applicable only for PWD and student.',
@@ -588,7 +588,7 @@ const EQUIPMENT_LIST = [
     ],
   },
   {
-    img:   '/images/equip1.png',
+    img:   '/images/cebinet-dryer.png',
     title: 'Cabinet Dryer',
     desc:  'A cabinet dryer uses controlled hot-air circulation to gently dehydrate fruits, vegetables, and herbs, producing consistent, shelf-stable dried food products.',
     highlight: 'Discount price applicable only for PWD and student.',
@@ -606,7 +606,7 @@ const EQUIPMENT_LIST = [
     ],
   },
   {
-    img:   '/images/equip1.png',
+    img:   '/images/water-retort.png',
     title: 'Water Retort Machine',
     desc:  'A water retort sterilizes packaged food products using pressurized hot water, ensuring commercial sterility and an extended shelf life without the need for refrigeration.',
     highlight: 'Discount price applicable only for PWD and student.',
