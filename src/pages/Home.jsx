@@ -563,10 +563,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/apple-powder.png',      label: 'Apple Powder'      },
-      { img: '/images/milk-powder.png',       label: 'Milk Powder'       },
-      { img: '/images/orange-powder.png',     label: 'Orange Powder'     },
-      { img: '/images/strawberry-powder.png', label: 'Strawberry Powder' },
+      { img: '/images/apple-powder.jpg',      label: 'Apple Powder'      },
+      { img: '/images/milk-powder.jpg',       label: 'Milk Powder'       },
+      { img: '/images/orange-powder.webp',     label: 'Orange Powder'     },
+      { img: '/images/strawberry-powder.jpeg', label: 'Strawberry Powder' },
     ],
   },
   {
@@ -582,7 +582,7 @@ const EQUIPMENT_LIST = [
     ],
     products: [
       { img: '/images/freeze-dried-banana.png',    label: 'Freeze-Dried Banana'    },
-      { img: '/images/freeze-dried-pineapple.png', label: 'Freeze-Dried Pineapple' },
+      { img: '/images/freeze-dried-pineapple.jpg', label: 'Freeze-Dried Pineapple' },
       { img: '/images/freeze-dried-papaya.png',    label: 'Freeze-Dried Papaya'    },
       { img: '/images/freeze-dried-jackfruit.png', label: 'Freeze-Dried Jackfruit' },
     ],
