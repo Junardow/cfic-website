@@ -546,7 +546,7 @@ const EQUIPMENT_LIST = [
     ],
     products: [
       { img: '/images/mixed-veggie-chips.png', label: 'Mixed Veggie Chips' },
-      { img: '/images/sweetpotato-chips.png',  label: 'Sweet Potato Chips' },
+      { img: '/images/sweetpotato-chip.png',  label: 'Sweetpotato Chips' },
       { img: '/images/mushroom-chips.png',     label: 'Mushroom Chips'     },
       { img: '/images/okra-chips.png',         label: 'Okra Chips'         },
     ],
@@ -563,10 +563,10 @@ const EQUIPMENT_LIST = [
       { title: 'Exclusion', desc: 'Oil, Packaging, and sanitation materials' },
     ],
     products: [
-      { img: '/images/squash-powder.png',    label: 'Squash Powder'    },
-      { img: '/images/papaya-powder.png',    label: 'Papaya Powder'    },
-      { img: '/images/pineapple-powder.png', label: 'Pineapple Powder' },
-      { img: '/images/cassava-powder.png',   label: 'Cassava Powder'   },
+      { img: '/images/apple-powder.png',      label: 'Apple Powder'      },
+      { img: '/images/milk-powder.png',       label: 'Milk Powder'       },
+      { img: '/images/orange-powder.png',     label: 'Orange Powder'     },
+      { img: '/images/strawberry-powder.png', label: 'Strawberry Powder' },
     ],
   },
   {
